@@ -7,7 +7,7 @@ phases:
       - aws --version
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --no-include-email --region us-east-1)
-      - REPOSITORY_URI=360236891659.dkr.ecr.us-east-1.amazonaws.com/lucky-draw-ecs
+      - REPOSITORY_URI=753588668255.dkr.ecr.us-east-1.amazonaws.com/lucky-draw-ecr
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
